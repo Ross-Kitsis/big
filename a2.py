@@ -12,7 +12,8 @@ DICTIONARYLOCATION="wordList.txt"
 com = wordProcess(DICTIONARYLOCATION,ALLCHAR)
 
 """ Create a random string """
-string = com.create_String(1000000)
+length = 1000000
+string = com.create_String(length)
 
 """ Find words in the string"""
 foundWords = com.find_Words(string)
