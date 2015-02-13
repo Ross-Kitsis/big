@@ -33,3 +33,16 @@ class wordProcess:
             if word in self.words and len(word) > 1:
                 allWords.append(word)        
         return allWords
+    
+    def get_statistics(self,allWords,foundWords):
+        """ Get % words, num valid words / num invalid """    
+        pWithDuplicates = float(len(foundWords))/len(allWords) * 100
+        pWithOutDuplicates = float(len(list(set(foundWords))))/len(allWords) * 100
+        return(pWithDuplicates,pWithOutDuplicates)
+    
+    
+    
+    
+    
+    
+    

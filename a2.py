@@ -10,8 +10,16 @@ ALLCHAR = ALLCHARACTERS +ADDCHAR
 DICTIONARYLOCATION="wordList.txt"
 
 com = wordProcess(DICTIONARYLOCATION,ALLCHAR)
+
+""" Create a random string """
 string = com.create_String(1000000)
-words = com.find_Words(string)
+
+""" Find words in the string"""
+foundWords = com.find_Words(string)
 
 
-print (words)
+print (foundWords)
+
+withDup, withoutDup = com.get_statistics(string,foundWords)
+
+print("Percent with duplicates {}%, Percent without duplicates {}% ".format(withDup, withoutDup))
